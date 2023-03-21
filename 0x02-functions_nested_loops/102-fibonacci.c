@@ -7,24 +7,23 @@
  */
 int main(void)
 {
-	unsigned long int sum3, sum5, sum;
-	int i;
+	int i=0;
+	long j =1, k = 2;
 
-	sum3 = 0;
-	sum5 = 0;
-	sum = 0;
-
-	for (i = 0; i < 1024; ++i)
+	while (i < 50)
 	{
-		if ((i % 3) == 0)
-		{
-			sum3 = sum3 + i;
-		} else if ((i % 5) == 0)
-		{
-			sum5 = sum5 + i;
-		}
+	if (i == 0)
+	print("%ld", j);
+	else if (i == 1)
+	print(", %ld", k);
+	else
+	{
+	k += j;
+	j = k - j;
+	print (", %ld", k);
 	}
-	sum = sum3 + sum5;
-	printf("%lu\n", sum);
+	++i;
+	}
+	printf("\n");
 	return (0);
 }
