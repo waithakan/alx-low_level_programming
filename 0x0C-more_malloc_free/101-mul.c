@@ -1,16 +1,16 @@
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
-
+#define ERR_MSG "Error"
 /**
  * is_digit - checks if a string contains a non-digit char
  * @s: string to be evaluated
- *
  * Return: 0 if a non-digit is found, 1 otherwise
  */
+
 int is_digit(char *s)
 {
+
 	int i = 0;
 
 	while (s[i])
@@ -25,11 +25,12 @@ int is_digit(char *s)
 /**
  * _strlen - returns the length of a string
  * @s: string to evaluate
- *
  * Return: the length of the string
  */
+
 int _strlen(char *s)
 {
+
 	int i = 0;
 
 	while (s[i] != '\0')
@@ -38,23 +39,26 @@ int _strlen(char *s)
 	}
 	return (i);
 }
+
 /**
  * errors - handles errors for main
  */
+
 void errors(void)
 {
 	printf("Error\n");
 	exit(98);
 }
+
 /**
  * main - multiplies two positive numbers
  * @argc: number of arguments
- * @argv: array of arguments
- *
  * Return: always 0 (Success)
  */
+
 int main(int argc, char *argv[])
 {
+
 	char *s1, *s2;
 	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
@@ -67,7 +71,6 @@ int main(int argc, char *argv[])
 	result = malloc(sizeof(int) * len);
 	if (!result)
 		return (1);
-
 	for (i = 0; i <= len1 + len2; i++)
 		result[i] = 0;
 	for (len1 = len1 - 1; len1 >= 0; len1--)
